@@ -1,0 +1,27 @@
+{
+  "name": "com.hextecgames.webglpackage",
+  "version": "1.0.0",
+  "displayName": "WebGLPackage",
+  "description": "My Package",
+  "unity": "2022.1",
+  "author": {
+    "name": "HexTecGames"
+  },
+  "samples": [
+    {
+      "displayName": "WebGLTemplates",
+      "path": "Samples/WebGLTemplates"
+    },
+    {
+      "displayName": "CoolMathGames Assets",
+      "path": "Samples/CoolMathGames"
+    },
+    {
+      "displayName": "Armorgames Assets",
+      "path": "Samples/Armorgames"
+    }
+  ],
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.0"
+  }
+}
