@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HexTecGames
+namespace HexTecGames.WebGLPackage
 {
     [CreateAssetMenu(menuName = "HexTecGames/Editor/WebsiteInfo")]
     public class WebsiteInfo : ScriptableObject

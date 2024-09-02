@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HexTecGames
+namespace HexTecGames.WebGLPackage
 {
     public class URLTester : MonoBehaviour
     {
