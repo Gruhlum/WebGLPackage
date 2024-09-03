@@ -73,6 +73,8 @@ namespace HexTecGames.WebGLPackage
 
         private void Bounce()
         {
+            Debug.Log("Invalid: " + Application.absoluteURL);
+
             switch (mode)
             {
                 case BounceMode.Quit:
