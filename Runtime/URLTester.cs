@@ -1,7 +1,5 @@
-using HexTecGames.Basics;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
+using HexTecGames.Basics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,14 +14,16 @@ namespace HexTecGames.WebGLPackage
 
         public enum BounceMode { Quit, Scene, GameObject }
         public BounceMode mode;
-        [DrawIf(nameof(mode), BounceMode.Scene)][SerializeField][Tooltip("Scene to load for invalid host")] 
+        [DrawIf(nameof(mode), BounceMode.Scene)]
+        [SerializeField]
+        [Tooltip("Scene to load for invalid host")]
         private string bounceSceneName = default;
         [DrawIf(nameof(mode), BounceMode.GameObject)][SerializeField] private GameObject bounceGO = default;
 
 
         [SerializeField] private bool testBounce = default;
 
-        void Start()
+        private void Start()
         {
             if (testBounce && Application.isEditor)
             {
@@ -49,7 +49,7 @@ namespace HexTecGames.WebGLPackage
             {
                 return false;
             }
-            foreach (var websiteInfo in websiteInfos)
+            foreach (WebsiteInfo websiteInfo in websiteInfos)
             {
                 if (IsValidHost(websiteInfo.GetValidUrls()))
                 {
@@ -90,7 +90,7 @@ namespace HexTecGames.WebGLPackage
                     if (bounceGO != null)
                     {
                         bounceGO.SetActive(true);
-                    }                   
+                    }
                     break;
                 default:
                     break;

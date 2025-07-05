@@ -1,6 +1,4 @@
 using HexTecGames.Basics.UI.Buttons;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +8,8 @@ namespace HexTecGames
     {
         private void Awake()
         {
-            var results = FindObjectsOfType<LinkButton>(true);
-            foreach (var result in results)
+            LinkButton[] results = FindObjectsOfType<LinkButton>(true);
+            foreach (LinkButton result in results)
             {
                 result.GetComponent<Button>().interactable = false;
             }
